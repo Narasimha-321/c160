@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>My Virtual Tour</title>
+  <script src="https://aframe.io/releases/0.6.0/aframe.min.js"></script>
+  <script src="Tour.js"></script>
+  <script src="CursorEvents.js"></script>
+</head>
+<body>
+  <a-scene>
+    <!-- 360-degree image sphere, replace "image1.jpg" with your image file name -->
+    <a-sky src="pic1.jpg"></a-sky>
+
+    <!-- Add more 360-degree images as needed, and update the 'src' attribute -->
+    <!-- <a-sky src="image2.jpg"></a-sky> -->
+    <a-sky src="pic2.jpg"></a-sky>
+    <a-entity camera look-controls></a-entity>
+
+    <!-- Cursor  -->
+    <a-entity cursor="fuse: true; fuseTimeout: 1500"
+              position="0 0 -1"
+              geometry="primitive: ring; radiusInner: 0.02; radiusOuter: 0.03"
+              material="color: black; shader: flat">
+    </a-entity>
+
+    <!-- Place Container  -->
+    <a-entity id="placeContainer"></a-entity>
+
+</a-scene>
+</body>
+</html>
